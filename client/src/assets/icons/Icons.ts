@@ -24,3 +24,10 @@ export const SEE_MORE_ICON = `<svg xmlns="http://www.w3.org/2000/svg" class="ico
 <polyline points="3 17 9 11 13 15 21 7" />
 <polyline points="14 7 21 7 21 14" />
 </svg>`
+export const CLOSE_ICON = `
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-x" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#040b1f" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+<rect x="4" y="4" width="16" height="16" rx="2" />
+<path d="M10 10l4 4m0 -4l-4 4" />
+</svg>
+`

@@ -1,13 +1,13 @@
 import React from 'react'
 import "./CardPost.scss"
 
-export interface ICard {
+export interface ICardProps {
   type: string
 }
-const CardPost = ({ type = 'block' }: ICard) => {
+const CardPost = ({ type = 'block' }: ICardProps) => {
   return (
     <div className='card'>
-      <div className={type === "block" ? "card-container" : "card-container card-container-row"}>
+      <div className={type === "block" ? "card-container" : "card-container-row"}>
         <img src="https://mria-hugo.netlify.app/images/11.jpg" alt="img logo" />
         <div className='card-right'>
           <div className='card-category'>

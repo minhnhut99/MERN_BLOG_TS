@@ -1,10 +1,7 @@
 @import "@/styles/styles.scss";
 .card {
-  width: 30%;
+  width: 100%;
   margin-right: 30px;
-  &-container-row {
-    display: flex;
-  }
   &-container {
     width: 100%;
     img {
@@ -12,6 +9,61 @@
       height: 320px;
       width: 100%;
       border-radius: 15px;
+    }
+  }
+  &-container-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    img {
+      width: 25%;
+      object-fit: cover;
+      height: 250px;
+      border-radius: 15px;
+      margin-right: 20px;
+    }
+    .card-right {
+      width:50%;
+    }
+    .card-category {
+      background-color: pink;
+      border-radius: 8px;
+      width: fit-content;
+      p {
+        padding: 5px 10px;
+        font-size: 11px;
+        font-weight: 500;
+        color: currentColor;
+        width: fit-content;
+      }
+    }
+    .card-title {
+      font-weight: bold;
+      font-size: 25px;
+    }
+    .card-desc {
+      font-size: 14px;
+      color: $gray-text-color;
+      line-height: 1.6;
+      margin-bottom: 5px;
+    }
+    .card-footer {
+      display: flex;
+      align-items: center;
+      img {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+    .card-author {
+      font-weight: 500;
+    }
+    .card-date {
+      color: $gray-text-color;
+      font-size: 12px;
     }
   }
   &-category {
