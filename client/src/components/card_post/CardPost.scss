@@ -1,0 +1,57 @@
+@import "@/styles/styles.scss";
+.card {
+  width: 30%;
+  margin-right: 30px;
+  &-container-row {
+    display: flex;
+  }
+  &-container {
+    width: 100%;
+    img {
+      object-fit: cover;
+      height: 320px;
+      width: 100%;
+      border-radius: 15px;
+    }
+  }
+  &-category {
+    background-color: pink;
+    border-radius: 8px;
+    width: fit-content;
+    p {
+      padding: 5px 10px;
+      font-size: 14px;
+      font-weight: 500;
+      color: currentColor;
+      width: fit-content;
+    }
+  }
+  &-title {
+    font-weight: bold;
+    font-size: 28px;
+  }
+  &-desc {
+    font-size: 15px;
+    color: $gray-text-color;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  &-footer {
+    display: flex;
+    align-items: center;
+    img {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+  &-author {
+    font-weight: 500;
+  }
+  &-date {
+    color: $gray-text-color;
+    font-size: 13px;
+  }
+}

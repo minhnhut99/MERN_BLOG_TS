@@ -1,0 +1,31 @@
+@import "@/styles/styles.scss";
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  &-logo {
+    img {
+      width: 250px;
+      height: 50px;
+      object-fit: cover;
+    }
+  }
+  &-menu {
+    display: flex;
+    li {
+      margin-left: 30px;
+      list-style-type: none;
+      font-weight: 500;
+      font-size: 17px;
+      transition: all 0.2s;
+      cursor: pointer;
+      &:hover {
+        color: $blue-color;
+      }
+    }
+  }
+  &-right {
+    display: flex;
+  }
+}
