@@ -12,18 +12,13 @@ const Search = ({ visible, setVisible }: ISearchProps) => {
   }
   const useOutSideSearchComponent = (ref: RefObject<HTMLElement>): void => {
     useEffect(() => {
-      /**
-       * Alert if clicked on outside of element
-       */
       const handleClickOutside = (event: MouseEvent): void => {
         if (ref.current && !ref.current.contains(event.target as Node)) {
           setVisible(false)
         }
       };
-      // Bind the event listener
       document.addEventListener("mousedown", handleClickOutside);
       return () => {
-        // Unbind the event listener on clean up
         document.removeEventListener("mousedown", handleClickOutside);
       };
     }, [ref]);

@@ -5,7 +5,7 @@ import Bio from '@/components/bio/Bio'
 import CardPost from '@/components/card_post/CardPost'
 const Global = () => {
   return (
-    <div>
+    <div className='background'>
       <Header />
       <div>
         <Bio />

@@ -4,6 +4,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 50px;
+  .icon-menu {
+    display: none;
+  }
   &-logo {
     img {
       width: 250px;
@@ -27,5 +30,25 @@
   }
   &-right {
     display: flex;
+  }
+  .icon-svg-light {
+    svg {
+      stroke: $white-color;
+    }
+  }
+  .icon-svg-dark {
+    svg {
+      stroke: $dark-blue-color;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    .icon-menu {
+      display: block;
+    }
   }
 }

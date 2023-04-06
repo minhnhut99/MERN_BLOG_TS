@@ -3,6 +3,28 @@ $black-color: #040b1f;
 $white-color: #ffffff;
 $gray-text-color: #8a93a3;
 $blue-color: #0d5ffe;
+$dark-color: #1f2934; 
+$dark-blue-color: #161d26;
 body {
   font-family: "Roboto Slab", serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.dark {
+  .background {
+  background-color: $dark-color;   
+  }
+  .text {
+    color: $white-color;      
+  }
+}
+.light {
+  .background {
+    background-color: $white-color;
+  }
+  .text {
+    color: $dark-blue-color;
+  }
 }
