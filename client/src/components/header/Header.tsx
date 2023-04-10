@@ -2,8 +2,9 @@ import { MENU_ICON, MOON_ICON, SEARCH_ICON, SUN_ICON } from '@/assets/icons/Icon
 import Search from "@/components/search/Search"
 import { useState } from "react"
 import "./Header.scss"
-import { useRecoilValue, useRecoilState } from "recoil"
+import { useRecoilState } from "recoil"
 import { toggleThemeValue } from '@/recoil/atoms'
+import Icon from '../icon/Icon'
 
 const Header = () => {
   const [isOpenSearch, setIsOpenSearch] = useState(false)
@@ -14,17 +15,10 @@ const Header = () => {
   const handleClickIconDarkTheme = () => {
     setDarkTheme(true)
   }
-  const handleIconSearchEngine = () => {
+  const handleClickIconSearchEngine = () => {
     setIsOpenSearch(true)
   }
   const handleClickIconMenu = () => {
-
-  }
-  const handleClassIconSvg = (): string => {
-    if (darkTheme) {
-      return "icon-svg-light"
-    }
-    return "icon-svg-dark"
   }
   return (
     <>
@@ -41,12 +35,12 @@ const Header = () => {
         </ul>
         <div className="header-right">
           {darkTheme ?
-            <div className={handleClassIconSvg()} onClick={handleClickIconLightTheme} dangerouslySetInnerHTML={{ __html: SUN_ICON }}></div>
+            <Icon classNameAdditional='icon-svg-light' onClick={handleClickIconLightTheme} icon={SUN_ICON} />
             :
-            <div className={handleClassIconSvg()} onClick={handleClickIconDarkTheme} dangerouslySetInnerHTML={{ __html: MOON_ICON }}></div>
+            <Icon classNameAdditional='icon-svg-dark' onClick={handleClickIconDarkTheme} icon={MOON_ICON} />
           }
-          <div className={handleClassIconSvg()} onClick={handleIconSearchEngine} dangerouslySetInnerHTML={{ __html: SEARCH_ICON }}></div>
-          <div className={handleClassIconSvg() + ' icon-menu'} onClick={handleClickIconMenu} dangerouslySetInnerHTML={{ __html: MENU_ICON }}></div>
+          <Icon classNameAdditional={!darkTheme ? "icon-svg-dark" : "icon-svg-light"} onClick={handleClickIconSearchEngine} icon={SEARCH_ICON} />
+          <Icon onClick={handleClickIconMenu} classNameAdditional='icon-menu' icon={MENU_ICON} />
         </div>
       </header>
       <Search visible={isOpenSearch} setVisible={setIsOpenSearch} />

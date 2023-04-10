@@ -10,8 +10,16 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    transition: all 0.15s;
+    &:hover {
+      border-color: $blue-color;
+    }
+  }
 }
-
 .dark {
   .background {
   background-color: $dark-color;   

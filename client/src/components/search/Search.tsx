@@ -1,6 +1,7 @@
 import { CLOSE_ICON } from '@/assets/icons/Icons'
 import "./Search.scss"
 import { useRef, RefObject, useEffect } from 'react'
+import Icon from "@/components/icon/Icon"
 interface ISearchProps {
   visible: boolean
   setVisible: (value: boolean) => void
@@ -29,7 +30,7 @@ const Search = ({ visible, setVisible }: ISearchProps) => {
       <div className="search-container">
         <div className='search-inner' ref={searchRef}>
           <input type="text" placeholder='Type to search...' />
-          <div className='close-icon' onClick={handleClickIconClose} dangerouslySetInnerHTML={{ __html: CLOSE_ICON }}></div>
+          <Icon onClick={handleClickIconClose} icon={CLOSE_ICON} classNameAdditional='close-icon' />
         </div>
       </div>
     </div>
